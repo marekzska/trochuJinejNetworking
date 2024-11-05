@@ -4,7 +4,7 @@ import { faGhost } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 import { FieldValues, FormProvider, useForm } from "react-hook-form";
-import { Button } from "./ui/button";
+import { Button } from "@/components/ui/button";
 
 export const ComingNetworkings = () => {
     const methods = useForm();

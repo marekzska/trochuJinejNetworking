@@ -5,7 +5,6 @@ import { useState } from "react";
 import MobileMenu from "./MobileMenu";
 import { RightMenu } from "./RightMenu";
 
-
 export function Header() {
     const [open, setOpen] = useState(false);
     const handleSetOpen = (value: boolean) => {

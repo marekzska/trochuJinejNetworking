@@ -1,6 +1,5 @@
 import { ComingNetworkings } from "./components/ComingNetworkings";
 import { DifferentNetworking } from "./components/DifferentNetworking";
-import { Footer } from "./components/Footer";
 import { HeroTitle } from "./components/HeroTitle";
 import { Instagram } from "./components/Instagram";
 import { OurVision } from "./components/OurVision";
@@ -19,7 +18,6 @@ export default function Home() {
       </div>
       <ComingNetworkings />
       <Instagram />
-      <Footer />
     </div>
   );
 }
