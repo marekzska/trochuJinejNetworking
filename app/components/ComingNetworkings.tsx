@@ -3,12 +3,12 @@ import { Input } from "@/components/Input";
 import { faGhost } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
-import { FormProvider, useForm } from "react-hook-form";
+import { FieldValues, FormProvider, useForm } from "react-hook-form";
 import { Button } from "./ui/button";
 
 export const ComingNetworkings = () => {
     const methods = useForm();
-    const onSubmit = (data: FormData) => {
+    const onSubmit = (data: FieldValues) => {
         console.log(data);
     };
     return (
