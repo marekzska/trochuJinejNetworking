@@ -1,16 +1,12 @@
 "use client";
-import { Bars3Icon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import MobileMenu from "./MobileMenu";
 import { RightMenu } from "./RightMenu";
 
-type HeaderProps = {
 
-};
-
-export function Header({ }: HeaderProps) {
+export function Header() {
     const [open, setOpen] = useState(false);
     const handleSetOpen = (value: boolean) => {
         setOpen(value);
@@ -34,7 +30,6 @@ export function Header({ }: HeaderProps) {
                                 />
                             </Link>
                         </div>
-
                         <RightMenu />
                     </div>
                 </div>

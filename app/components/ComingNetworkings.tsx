@@ -8,7 +8,7 @@ import { Button } from "./ui/button";
 
 export const ComingNetworkings = () => {
     const methods = useForm();
-    const onSubmit = (data: any) => {
+    const onSubmit = (data: FormData) => {
         console.log(data);
     };
     return (

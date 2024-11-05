@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 
 
-export function RightMenu({ className }: { className?: string }) {
+export function RightMenu() {
     return (
         <div className='px-2 lg:px-4 flex gap-2 lg:gap-6 py-1 flex items-center'>
             <Link href='#' target="_blank">
