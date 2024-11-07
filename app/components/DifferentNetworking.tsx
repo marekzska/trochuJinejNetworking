@@ -1,28 +1,15 @@
+import { getDifferentNetworkingSectionData } from "@/model/api/getDifferentNetworkingSectionData"
 import Image from "next/image"
 
-export const DifferentNetworking = () => {
+export const DifferentNetworking = async () => {
+    const differentNetworkingData = await getDifferentNetworkingSectionData()
     return (
-        <div className="w-full py-10">
-            <div className="mx-auto max-w-screen-2xl px-6 lg:px-20 flex justify-between items-center">
-                <div className="w-1/2 pr-28 flex flex-col items-start gap-6">
-                    <h2 className="text-networking-green font-bold text-4xl">Proč je náš networking jiný?</h2>
-                    <p>
-                        Naše jedinečná networkingová hra promění obyčejné seznamování v zábavný a efektivní proces.
-                    </p>
-                    <p>
-                        Díky originálnímu hernímu konceptu zkrátíte cestu k navázání hodnotné spolupráce
-                        <span className="font-bold text-networking-green">
-                            &nbsp;až o 3 běžné schůzky.
-                        </span>
-                    </p>
-                    <p>
-                        Každé setkání je tematicky zaměřené a nabízí prostor pro přirozené poznávání ostatních účastníků v uvolněné atmosféře.
-                    </p>
-                    <div className="text-3xl text-networking-green">
-                        Nejde jen o to, koho znáte. Jde o to, jak hluboce se znáte.
-                    </div>
+        <div className="w-full py-10 sm:py-16 xl:py-10 h-full">
+            <div className="mx-auto h-full max-w-screen-2xl px-6 lg:px-10 xl:px-20 flex flex-col xl:flex-row justify-between xl:items-center gap-10 xl:gap-0">
+                <div className="xl:w-1/2 xl:pr-28 text-lg" dangerouslySetInnerHTML={{ __html: differentNetworkingData.text }} />
+                <div className="xl:w-1/2 aspect-square sm:aspect-video rounded-3xl relative overflow-hidden">
+                    <Image src={`${process.env.NEXT_PUBLIC_CMS_URL}${differentNetworkingData.image.url}`} alt={differentNetworkingData.image.hash} fill={true} className="object-cover" />
                 </div>
-                <Image src='/images/differentNetworkingImage.png' alt="vision image" width={800} height={600} className="w-1/2 rounded-3xl" />
             </div>
         </div>
     )

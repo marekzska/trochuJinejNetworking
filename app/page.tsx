@@ -6,7 +6,7 @@ import { OurVision } from "./components/OurVision";
 import { VideoSection } from "./components/VideoSection";
 import { WhatToExpect } from "./components/WhatToExpect";
 
-export default function Home() {
+export default async function Home() {
   return (
     <div className="w-full">
       <HeroTitle />

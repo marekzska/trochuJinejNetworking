@@ -1,25 +1,9 @@
-import { Montserrat_Alternates } from "next/font/google";
+import { getLandingData } from '@/model/api/getLandingData';
+import '../globals.css';
 
-const montserratAlternates = Montserrat_Alternates({
-    weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-    subsets: ["latin"],
-});
-
-
-export const HeroTitle = () => {
+export const HeroTitle = async () => {
+    const landingData = await getLandingData()
     return (
-        <div className="w-full pt-24 pb-14 flex">
-            <h1 className="text-8xl max-w-screen-2xl px-6 lg:px-20 font-bold leading-[110px] mx-auto">
-                KDE SE
-                <span className="text-networking-green">
-                    &nbsp;BUSINESS
-                </span>
-                <br />
-                POTKÁVÁ SE
-                <span className={`text-networking-green ${montserratAlternates.className}`}>
-                    &nbsp;ZÁBAVOU
-                </span>
-            </h1>
-        </div>
+        <div className="w-full py-10 sm:py-16 lg:pt-20 lg:pb-10 flex text-5xl sm:text-8xl lg:text-7xl max-w-screen-2xl px-6 lg:px-10 xl:px-20 mx-auto" dangerouslySetInnerHTML={{ __html: landingData.text }} />
     )
 }

@@ -11,7 +11,7 @@ function PastEvent() {
     return (
         <div className="w-full">
             <div className="w-full py-10">
-                <div className="mx-auto max-w-screen-2xl px-6 lg:px-20 grid grid-cols-2">
+                <div className="mx-auto max-w-screen-2xl px-6 lg:px-10 xl:px-20 grid grid-cols-2">
                     <div className="pr-28 flex flex-col items-start gap-6">
                         <p className="text-lg">
                             Ahoj.
@@ -83,7 +83,7 @@ function PastEvent() {
 
 
             <div className="w-full py-10">
-                <div className="mx-auto max-w-screen-2xl px-6 lg:px-20 flex flex-col gap-3">
+                <div className="mx-auto max-w-screen-2xl px-6 lg:px-10 xl:px-20 flex flex-col gap-3">
                     <h2 className="text-white font-bold text-4xl">Galerie</h2>
                     <div className="flex gap-3">
                         <div className="w-full relative overflow-hidden rounded-xl">
