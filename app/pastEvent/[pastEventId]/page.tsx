@@ -72,7 +72,7 @@ function PastEvent() {
                             </div>
                         </div>
                         <div className="relative w-1/2 overflow-hidden rounded-3xl">
-                            <Image src='/images/secondImage.png' alt="vision image" fill={true} />
+                            <Image unoptimized={true} src='/images/secondImage.png' alt="vision image" fill={true} />
                         </div>
                     </div>
                 </div>
@@ -87,7 +87,7 @@ function PastEvent() {
                     <h2 className="text-white font-bold text-4xl">Galerie</h2>
                     <div className="flex gap-3">
                         <div className="w-full relative overflow-hidden rounded-xl">
-                            <Image src='/images/firstImage.png' alt="vision image" fill={true} className="object-cover" />
+                            <Image unoptimized={true} src='/images/firstImage.png' alt="vision image" fill={true} className="object-cover" />
                             <Button className="absolute bg-networking-green text-white flex items-center justify-center px-4 py-7 rounded-none left-5 top-1/2 -translate-y-1/2 hover:bg-networking-dark">
                                 <FontAwesomeIcon icon={faChevronLeft} className="h-5" />
                             </Button>
@@ -97,40 +97,40 @@ function PastEvent() {
                         </div>
                         <div className="w-6/12 grid grid-cols-4 grid-rows-3 gap-3">
                             <div className="relative w-full aspect-[9/14] overflow-hidden rounded-xl">
-                                <Image src='/images/firstImage.png' alt="vision image" fill={true} />
+                                <Image unoptimized={true} src='/images/firstImage.png' alt="vision image" fill={true} />
                             </div>
                             <div className="relative w-full aspect-[9/14] overflow-hidden rounded-xl">
-                                <Image src='/images/firstImage.png' alt="vision image" fill={true} />
+                                <Image unoptimized={true} src='/images/firstImage.png' alt="vision image" fill={true} />
                             </div>
                             <div className="relative w-full aspect-[9/14] overflow-hidden rounded-xl">
-                                <Image src='/images/firstImage.png' alt="vision image" fill={true} />
+                                <Image unoptimized={true} src='/images/firstImage.png' alt="vision image" fill={true} />
                             </div>
                             <div className="relative w-full aspect-[9/14] overflow-hidden rounded-xl">
-                                <Image src='/images/firstImage.png' alt="vision image" fill={true} />
+                                <Image unoptimized={true} src='/images/firstImage.png' alt="vision image" fill={true} />
                             </div>
                             <div className="relative w-full aspect-[9/14] overflow-hidden rounded-xl">
-                                <Image src='/images/firstImage.png' alt="vision image" fill={true} />
+                                <Image unoptimized={true} src='/images/firstImage.png' alt="vision image" fill={true} />
                             </div>
                             <div className="relative w-full aspect-[9/14] overflow-hidden rounded-xl">
-                                <Image src='/images/firstImage.png' alt="vision image" fill={true} />
+                                <Image unoptimized={true} src='/images/firstImage.png' alt="vision image" fill={true} />
                             </div>
                             <div className="relative w-full aspect-[9/14] overflow-hidden rounded-xl">
-                                <Image src='/images/firstImage.png' alt="vision image" fill={true} />
+                                <Image unoptimized={true} src='/images/firstImage.png' alt="vision image" fill={true} />
                             </div>
                             <div className="relative w-full aspect-[9/14] overflow-hidden rounded-xl">
-                                <Image src='/images/firstImage.png' alt="vision image" fill={true} />
+                                <Image unoptimized={true} src='/images/firstImage.png' alt="vision image" fill={true} />
                             </div>
                             <div className="relative w-full aspect-[9/14] overflow-hidden rounded-xl">
-                                <Image src='/images/firstImage.png' alt="vision image" fill={true} />
+                                <Image unoptimized={true} src='/images/firstImage.png' alt="vision image" fill={true} />
                             </div>
                             <div className="relative w-full aspect-[9/14] overflow-hidden rounded-xl">
-                                <Image src='/images/firstImage.png' alt="vision image" fill={true} />
+                                <Image unoptimized={true} src='/images/firstImage.png' alt="vision image" fill={true} />
                             </div>
                             <div className="relative w-full aspect-[9/14] overflow-hidden rounded-xl">
-                                <Image src='/images/firstImage.png' alt="vision image" fill={true} />
+                                <Image unoptimized={true} src='/images/firstImage.png' alt="vision image" fill={true} />
                             </div>
                             <div className="relative w-full aspect-[9/14] overflow-hidden rounded-xl">
-                                <Image src='/images/firstImage.png' alt="vision image" fill={true} />
+                                <Image unoptimized={true} src='/images/firstImage.png' alt="vision image" fill={true} />
                             </div>
                         </div>
                     </div>

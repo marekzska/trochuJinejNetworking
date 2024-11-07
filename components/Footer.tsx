@@ -8,9 +8,9 @@ export const Footer = () => {
                 <div className="md:w-1/3 flex flex-col gap-4 items-start">
                     <h6 className="text-white">Partneři</h6>
                     <div className="flex justify-between items-center gap-10">
-                        <Image src="/images/zigilabd.svg" alt="zigilab" width={100} height={100} className="w-20 h-auto" />
-                        <Image src="/images/wantmore.svg" alt="wantmore" width={100} height={100} className="w-20 h-auto" />
-                        <Image src="/images/trlicek.svg" alt="tomas trlicek" width={100} height={100} className="w-20 h-auto" />
+                        <Image unoptimized={true} src="/images/zigilabd.svg" alt="zigilab" width={100} height={100} className="w-20 h-auto" />
+                        <Image unoptimized={true} src="/images/wantmore.svg" alt="wantmore" width={100} height={100} className="w-20 h-auto" />
+                        <Image unoptimized={true} src="/images/trlicek.svg" alt="tomas trlicek" width={100} height={100} className="w-20 h-auto" />
                     </div>
                     <p className="text-xs">
                         webstránku vytvořili: <Link className="underline" href='https://www.linkedin.com/in/marekzska/'>Marek Žiška</Link> a <Link className="underline" href='https://www.linkedin.com/in/trlicek/'>Tomáš Trlíček</Link>

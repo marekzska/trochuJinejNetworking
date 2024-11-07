@@ -12,7 +12,7 @@ export function Header() {
                         <div className='flex lg:items-center'>
                             <Link href={`/`}>
                                 <span className='sr-only'>Trochu Jinej Networking</span>
-                                <Image unoptimized={true}
+                                <Image unoptimized={true} unoptimized={true}
                                     src='/images/logo.png'
                                     width={0}
                                     height={0}
