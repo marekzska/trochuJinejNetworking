@@ -11,7 +11,7 @@ export const NetworkingForm = () => {
         console.log(data);
     };
     return (
-        <div className='flex flex-col my-auto w-2/6 ml-auto'>
+        <div className='flex flex-col my-auto sm:w-3/5 lg:w-2/6 lg:ml-auto'>
             <FormProvider {...methods}>
                 <form onSubmit={methods.handleSubmit(onSubmit)} >
                     <div className='grid md:grid-cols-2 grid-rows-4 md:grid-rows-2 gap-2'>
@@ -32,8 +32,8 @@ export const NetworkingForm = () => {
                     </div>
                 </form>
             </FormProvider>
-            <p className="text-xs text-black ml-auto mt-2">Odesláním souhlasíte s podmínkami zpracování osobních údajů</p>
-            <p className="text-xs text-black ml-auto">*Tento údaj je potřebný k odeslání</p>
+            <p className="text-xs text-black ml-auto mt-2 text-right">Odesláním souhlasíte s podmínkami zpracování osobních údajů</p>
+            <p className="text-xs text-black ml-auto text-right">*Tento údaj je potřebný k odeslání</p>
         </div>
     )
 }
