@@ -22,9 +22,9 @@ export default async function Event({ params }: PastEventProps) {
     return (
         <div className="w-full">
             <div className="w-full py-5 md:py-10">
-                <div className="mx-auto max-w-screen-2xl px-6 lg:px-10 xl:px-20 grid xl:grid-cols-2 items-center gap-y-10">
-                    <div className="xl:pr-28 flex flex-col items-start gap-6 text-lg" dangerouslySetInnerHTML={{ __html: event.longDescription }} />
-                    <div className="h-full flex gap-4 flex-col md:flex-row">
+                <div className="mx-auto max-w-screen-2xl px-6 lg:px-10 xl:px-20 grid xl:grid-cols-5 items-center gap-y-10">
+                    <div className="xl:pr-28 flex flex-col items-start gap-6 text-lg col-span-2" dangerouslySetInnerHTML={{ __html: event.longDescription }} />
+                    <div className="h-full flex items-center gap-4 flex-col md:flex-row col-span-3">
                         <div className="flex flex-col md:w-1/2 my-auto gap-10">
                             <div className="flex flex-col items-start">
                                 <FontAwesomeIcon icon={faClock} className="h-10 text-networking-lightGray mb-2" />
