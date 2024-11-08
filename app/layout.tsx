@@ -13,6 +13,7 @@ const montserrat = Montserrat({
 export const metadata: Metadata = {
   title: "Trochu Jinej Networking",
   description: "Trochu Jinej Networking",
+  keywords: "networking, marketing, business",
 };
 
 export default function RootLayout({
