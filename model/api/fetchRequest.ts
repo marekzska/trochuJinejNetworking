@@ -26,7 +26,7 @@ export async function fetchRequest<T>(
   );
 
   console.log(
-    `ℹ️ Sending request ${requestId} ${url} ${
+    `ℹ️ Sending request ${requestId} ${url}${queryString && `?${queryString}`} ${
       body ? formatForLog(JSON.stringify(body)) : ""
     }`
   );
