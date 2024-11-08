@@ -1,7 +1,7 @@
 import { ComingNetworkings } from "./components/ComingNetworkings";
 import { DifferentNetworking } from "./components/DifferentNetworking";
 import { HeroTitle } from "./components/HeroTitle";
-import { Instagram } from "./components/Instagram";
+// import { Instagram } from "./components/Instagram";
 import { OurVision } from "./components/OurVision";
 import { VideoSection } from "./components/VideoSection";
 import { WhatToExpect } from "./components/WhatToExpect";

@@ -10,7 +10,7 @@ export const OurVision = async () => {
                     {/* <Image unoptimized={true} src={`${process.env.NEXT_PUBLIC_CMS_URL}${visionSectionData.image.url}`} alt={visionSectionData.image.hash} fill={true} className="object-cover" /> */}
                     <Image unoptimized={true} src={'/images/NetworkingJinejObrazek.jpg'} alt={'vision image'} fill={true} className="object-cover" />
                 </div>
-                <div className="xl:w-1/2 xl:pl-36 text-lg pl-6" dangerouslySetInnerHTML={{ __html: visionSectionData.text }} />
+                <div className="xl:w-1/2 xl:pl-36 text-lg" dangerouslySetInnerHTML={{ __html: visionSectionData.text }} />
             </div>
         </div>
     )

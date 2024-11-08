@@ -1,9 +1,14 @@
-"use client";
 import Image from "next/image";
 import Link from "next/link";
 import { RightMenu } from "./RightMenu";
+import { getEvents } from "@/model/api/getEvents";
+import { daysToEvent } from "@/lib/utils";
 
-export function Header() {
+export async function Header() {
+    const eventResults = await getEvents()
+    const sortedEvents = eventResults.filter((item) => item.archived !== true).filter((item) => daysToEvent(item.date) > 0).sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
+
+
     return (
         <div className='sticky top-0 z-40 w-full bg-black'>
             <header className='relative'>
@@ -21,7 +26,7 @@ export function Header() {
                                 />
                             </Link>
                         </div>
-                        <RightMenu />
+                        <RightMenu event={sortedEvents[0].slug} />
                     </div>
                 </div>
             </header>

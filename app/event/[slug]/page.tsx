@@ -1,6 +1,6 @@
 "use server"
 import { ComingNetworkings } from "@/app/components/ComingNetworkings"
-import { Instagram } from "@/app/components/Instagram"
+// import { Instagram } from "@/app/components/Instagram"
 import { daysToEvent, formattedDate, formattedTime } from "@/lib/utils"
 import { getEvents } from "@/model/api/getEvents"
 import { faClock, faCoins, faMap } from "@fortawesome/free-solid-svg-icons"

@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 import { usePathname, } from "next/navigation";
 
-export function RightMenu() {
+export function RightMenu({ event }: { event: string }) {
     const pathname = usePathname();
     return (
         <div className='px-2 lg:px-4 flex gap-3 lg:gap-6 py-1 flex flex-col-reverse sm:flex-row items-center'>
@@ -30,7 +30,7 @@ export function RightMenu() {
                 </Link>
             </div>
             {pathname === '/' ?
-                <Link href="#" className="bg-networking-green hover:bg-networking-lightGray text-black font-bold text-xs rounded-sm px-3 py-2 flex items-center justify-center">Chci na Jinej Networking</Link>
+                <Link href={`/event/${event}`} className="bg-networking-green hover:bg-networking-lightGray text-black font-bold text-xs rounded-sm px-3 py-2 flex items-center justify-center">Chci na Jinej Networking</Link>
                 :
                 <Link href="/" className="bg-networking-green hover:bg-networking-lightGray text-black font-bold text-xs rounded-sm px-3 py-2 flex items-center justify-center"><FontAwesomeIcon icon={faArrowLeft} className="w-6" />Zpět</Link>
             }
