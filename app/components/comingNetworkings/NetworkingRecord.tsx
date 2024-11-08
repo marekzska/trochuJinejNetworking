@@ -22,7 +22,7 @@ export const NetworkingRecord = ({ icon, title, theme, motto, date, inPreparatio
             <div className="flex flex-col lg:flex-row">
                 <div className="flex flex-col gap-2 lg:w-3/5">
                     <h2 className="text-networking-green font-normal text-3xl">Styl: <span className="font-bold">{title}</span></h2>
-                    <p className="font-bold text-networking-green text-lg">{theme}</p>
+                    <p className="font-bold text-networking-green text-lg">Přednáška: {theme}</p>
                     <p className="mt-2">{motto}</p>
                 </div>
                 <div className="lg:ml-auto flex flex-col w-48 items-start mt-5 lg:mt-0">

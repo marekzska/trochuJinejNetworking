@@ -17,7 +17,7 @@ export default async function Home() {
         <DifferentNetworking />
       </div>
       <ComingNetworkings />
-      <Instagram />
+      {/* <Instagram /> */}
     </div>
   );
 }

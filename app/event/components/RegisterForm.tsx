@@ -101,7 +101,7 @@ export const RegisterForm = ({ formDisclaimer, slug }: RegisterFormProps) => {
                                             </svg>
                                         </span>
                                     </div>
-                                    <span className="text-xs">Zastupuji společnost</span>
+                                    <span className="text-xs">Fakturuji na firmu</span>
                                 </div>
                                 {methods.watch('isCompany') &&
                                     < div className='flex flex-col md:grid md:grid-cols-3 md:grid-rows-2 gap-3 md:gap-4 mt-4'>

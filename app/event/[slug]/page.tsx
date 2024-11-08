@@ -42,7 +42,7 @@ export default async function Event({ params }: PastEventProps) {
                                     Cena je <span className="text-networking-green font-bold">{`${event.price} Kč`}</span> za akci, ze které si odneseš více než jen studené kontakty.</div>
                             </div>
                         </div>
-                        <NetworkingVideo />
+                        <NetworkingVideo slug={slug} />
                     </div>
                 </div>
             </div>
@@ -59,7 +59,7 @@ export default async function Event({ params }: PastEventProps) {
 
 
             <ComingNetworkings />
-            <Instagram />
+            {/* <Instagram /> */}
         </div>
     )
 }
