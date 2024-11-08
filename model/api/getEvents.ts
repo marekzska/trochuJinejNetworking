@@ -4,12 +4,6 @@ import { fetchRequest } from "./fetchRequest";
 import queryString from "query-string";
 
 export async function getEvents(slug?: string): Promise<Event[]> {
-  console.log(
-    queryString.stringify({
-      populate: "*",
-      ...(slug && { filters: `[slug][$eq]=${slug}` }),
-    })
-  );
   const response = await fetchRequest<EventData>(
     `${process.env.NEXT_PUBLIC_CMS_URL}${ApiEnum.CMS_EVENTS}`,
     queryString.stringify({

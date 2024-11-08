@@ -6,10 +6,9 @@ import { getEvents } from "@/model/api/getEvents"
 import { faClock, faCoins, faMap } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import Link from "next/link"
-import { Gallery } from "../components/Gallery"
-import { RegisterForm } from "../components/RegisterForm"
-import { faYoutube } from "@fortawesome/free-brands-svg-icons"
 import { NetworkingVideo } from "../components/NetworkingVideo"
+import { RegisterForm } from "../components/RegisterForm"
+import { Gallery } from "../components/Gallery"
 
 type PastEventProps = {
     params: Promise<{ slug: string }>

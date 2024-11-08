@@ -7,6 +7,8 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { useAction } from "next-safe-action/hooks";
 import { useEffect } from "react";
 import { FormProvider, SubmitHandler, useForm } from "react-hook-form";
+import { useToast } from "@/hooks/use-toast"
+
 
 type RegisterFormProps = {
     formDisclaimer: string;
@@ -14,7 +16,7 @@ type RegisterFormProps = {
 }
 
 export const RegisterForm = ({ formDisclaimer, slug }: RegisterFormProps) => {
-
+    const { toast } = useToast()
     const methods = useForm<RegisterFormValues>({
         resolver: zodResolver(registerFormSchema),
         defaultValues: {
@@ -34,7 +36,7 @@ export const RegisterForm = ({ formDisclaimer, slug }: RegisterFormProps) => {
             zipNumber: '',
         }
     });
-    const { execute, status, result } = useAction(RegisterFormAction)
+    const { execute, status } = useAction(RegisterFormAction)
     const onSubmit: SubmitHandler<RegisterFormValues> = (data) => {
         execute({ ...data, event: slug });
     };
@@ -42,6 +44,9 @@ export const RegisterForm = ({ formDisclaimer, slug }: RegisterFormProps) => {
     useEffect(() => {
         if (status === 'hasSucceeded') {
             methods.reset();
+            toast({
+                title: "Registrace proběhla úspěšně",
+            })
         }
     }, [status])
 
@@ -57,14 +62,14 @@ export const RegisterForm = ({ formDisclaimer, slug }: RegisterFormProps) => {
         }
     }, [methods.watch('isCompany')]);
 
+
     return (
         <div className="w-full py-5 md:py-10">
-            <div className="mx-auto max-w-screen-2xl px-6 lg:px-10 xl:px-20 flex flex-col-reverse xl:flex-row gap-x-32 gap-y-10">
+            <div className="mx-auto max-w-screen-2xl px-6 lg:px-10 xl:px-20 flex flex-col-reverse xl:flex-row items-center gap-x-32 gap-y-10">
                 <div className="xl:w-1/2">
                     <div className='flex flex-col my-auto'>
                         <FormProvider {...methods}>
                             <form onSubmit={methods.handleSubmit(onSubmit)} >
-                                {/* <form id='sheetdb-form' method="post" action="https://sheetdb.io/api/v1/bk227xu7rfwd8" > */}
                                 <div className='flex flex-col md:grid md:grid-cols-2 md:grid-rows-3 gap-3 md:gap-4'>
                                     <Input name='name' placeholder='Jméno a příjmení*' type='text' />
                                     <Input name='email' placeholder='Váš email*' type='email' />
@@ -150,9 +155,7 @@ export const RegisterForm = ({ formDisclaimer, slug }: RegisterFormProps) => {
                         </FormProvider>
                     </div>
                 </div>
-                <div className="xl:w-1/2 flex flex-col gap-4 list-disc" dangerouslySetInnerHTML={{ __html: formDisclaimer }}>
-
-                </div>
+                <div className="xl:w-1/2 flex flex-col gap-4 list-disc" dangerouslySetInnerHTML={{ __html: formDisclaimer }} />
             </div>
         </div >
     )
