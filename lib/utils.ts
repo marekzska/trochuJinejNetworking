@@ -7,11 +7,23 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 export function formattedDate(date: string) {
-  return new Date(date).toLocaleDateString("cs-CZ", {
-    day: "numeric",
-    month: "numeric",
-    year: "numeric",
-  });
+  return new Date(date)
+    .toLocaleDateString("cs-CZ", {
+      day: "numeric",
+      month: "numeric",
+      year: "numeric",
+    })
+    .replace(/ /g, "");
+}
+
+export function formattedTime(date: string) {
+  return new Date(date)
+    .toLocaleString("cs-CZ", {
+      hour: "numeric",
+      minute: "numeric",
+      hour12: false,
+    })
+    .replace(/ /g, "");
 }
 
 export function daysToEvent(date: string) {

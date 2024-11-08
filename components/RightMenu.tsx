@@ -10,19 +10,19 @@ export function RightMenu() {
     return (
         <div className='px-2 lg:px-4 flex gap-3 lg:gap-6 py-1 flex flex-col-reverse sm:flex-row items-center'>
             <div className="flex gap-3">
-                <Link href='#' target="_blank">
+                <Link href='https://www.linkedin.com/company/trochu-jinej-networking/posts/?feedView=all' target="_blank">
                     <FontAwesomeIcon
                         icon={faLinkedin}
                         className='h-4 w-4 text-white'
                     />
                 </Link>
-                <Link href='#' target="_blank">
+                <Link href='https://www.facebook.com/trochujinejnetworking' target="_blank">
                     <FontAwesomeIcon
                         icon={faFacebook}
                         className='h-4 w-4 text-white'
                     />
                 </Link>
-                <Link href='#' target="_blank">
+                <Link href='https://www.instagram.com/trochujinejnetworking/' target="_blank">
                     <FontAwesomeIcon
                         icon={faInstagram}
                         className='h-4 w-4 text-white'
