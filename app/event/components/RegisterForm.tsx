@@ -155,7 +155,7 @@ export const RegisterForm = ({ formDisclaimer, slug }: RegisterFormProps) => {
                         </FormProvider>
                     </div>
                 </div>
-                <div className="xl:w-1/2 flex flex-col gap-4 list-disc" dangerouslySetInnerHTML={{ __html: formDisclaimer }} />
+                <div className="xl:w-1/2 flex flex-col gap-4 list-disc hasList" dangerouslySetInnerHTML={{ __html: formDisclaimer }} />
             </div>
         </div >
     )

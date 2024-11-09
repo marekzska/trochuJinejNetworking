@@ -9,7 +9,7 @@ export const OurVision = async () => {
                 <div className="w-full xl:w-1/2 aspect-square sm:aspect-video xl:aspect-none xl:h-full rounded-3xl relative overflow-hidden">
                     <Image unoptimized={true} src={'/images/NetworkingJinejObrazek.jpg'} alt={'vision image'} fill={true} className="object-cover" />
                 </div>
-                <div className="xl:w-1/2 text-lg" dangerouslySetInnerHTML={{ __html: visionSectionData.text }} />
+                <div className="xl:w-1/2 text-lg hasList" dangerouslySetInnerHTML={{ __html: visionSectionData.text }} />
             </div>
         </div>
     )
