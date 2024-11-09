@@ -11,7 +11,7 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "Trochu Jinej Networking",
+  title: "Trochu Jinej Networking | Networking s přesahem všemi směry",
   description: "Trochu Jinej Networking",
   keywords: "networking, marketing, business",
 };
