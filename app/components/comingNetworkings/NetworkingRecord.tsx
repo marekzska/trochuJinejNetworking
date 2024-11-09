@@ -17,7 +17,7 @@ type NetworkingRecordProps = {
 export const NetworkingRecord = ({ icon, title, theme, motto, date, inPreparation, slug, registeredPeopleNote }: NetworkingRecordProps) => {
 
     return (
-        <div className="flex flex-col sm:flex-row bg-networking-dark w-full p-6">
+        <div className="flex flex-col sm:flex-row bg-networking-dark w-full p-6 h-full">
             <FontAwesomeIcon icon={FinalIcon(icon) as IconProp} className="h-16 text-networking-lightGray mr-10 my-auto" />
             <div className="flex flex-col lg:flex-row">
                 <div className="flex flex-col gap-2 lg:w-3/5">
