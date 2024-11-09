@@ -7,7 +7,7 @@ import { useState } from "react"
 
 export const Gallery = () => {
     const [currentImage, setCurrentImage] = useState(0);
-    const galleryImages = ['galleryImage.png', 'galleryImage2.png', 'galleryImage3.png', 'galleryImage4.png',
+    const galleryImages = ['galleryImage.png', 'galleryImage2.png', 'galleryImage4.png',
         'galleryImage5.png', 'galleryImage6.png', 'galleryImage7.png', 'galleryImage8.png', 'galleryImage9.png', 'secondImage.png',
     ]
 
