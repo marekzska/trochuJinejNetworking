@@ -18,7 +18,7 @@ export const NetworkingRecord = ({ icon, title, theme, motto, date, inPreparatio
 
     return (
         <div className="flex flex-col sm:flex-row bg-networking-dark w-full p-6 h-full">
-            <FontAwesomeIcon icon={FinalIcon(icon) as IconProp} className="h-16 text-networking-lightGray mr-10 my-auto" />
+            <FontAwesomeIcon icon={FinalIcon(icon) as IconProp} className="h-16 text-networking-lightGray sm:mr-10 my-auto" />
             <div className="flex flex-col lg:flex-row">
                 <div className="flex flex-col gap-2 lg:w-3/5">
                     <h2 className="text-networking-lightGray text-3xl font-bold">{title}</h2>

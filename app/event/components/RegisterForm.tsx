@@ -50,7 +50,6 @@ export const RegisterForm = ({ formDisclaimer, slug }: RegisterFormProps) => {
         }
     }, [status])
 
-
     useEffect(() => {
         if (methods.watch('isCompany')) {
             methods.resetField('companyName');
@@ -62,14 +61,13 @@ export const RegisterForm = ({ formDisclaimer, slug }: RegisterFormProps) => {
         }
     }, [methods.watch('isCompany')]);
 
-
     return (
-        <div className="w-full py-5 md:py-10">
+        <div id="form" className="w-full py-5 md:py-10">
             <div className="mx-auto max-w-screen-2xl px-6 lg:px-10 xl:px-20 flex flex-col-reverse xl:flex-row items-center gap-x-32 gap-y-10">
                 <div className="xl:w-1/2">
-                    <div className='flex flex-col my-auto'>
+                    <div className='flex flex-col my-auto' >
                         <FormProvider {...methods}>
-                            <form onSubmit={methods.handleSubmit(onSubmit)} >
+                            <form onSubmit={methods.handleSubmit(onSubmit)}  >
                                 <div className='flex flex-col md:grid md:grid-cols-2 md:grid-rows-3 gap-3 md:gap-4'>
                                     <Input name='name' placeholder='Jméno a příjmení*' type='text' />
                                     <Input name='email' placeholder='Váš email*' type='email' />
