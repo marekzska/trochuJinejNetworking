@@ -6,9 +6,11 @@ import { Dialog, DialogBackdrop, DialogPanel, DialogTitle } from '@headlessui/re
 import Image from "next/image"
 import Link from "next/link"
 import { useState } from 'react'
+import { faFacebook, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 
 export const Footer = () => {
     const [open, setOpen] = useState(false)
+    const [contactOpen, setContactOpen] = useState(false)
 
     return (
         <div className="w-full mt-16 xl:mt-10 py-10 bg-networking-dark">
@@ -35,6 +37,7 @@ export const Footer = () => {
                         <div onClick={() => setOpen(true)} className="text-white text-xs underline cursor-pointer">GDPR</div>
                         {/* <Link href="#" className="text-white text-xs underline">Cookies</Link> */}
                         <Link href="/" className="text-white text-xs underline">Domů</Link>
+                        <div onClick={() => setContactOpen(true)} className="text-white text-xs underline cursor-pointer">Kontakt</div>
                         {/* <Link href="#" className="text-white text-xs underline">Downloads</Link> */}
                     </div>
                     <p className="text-xs">
@@ -90,6 +93,82 @@ export const Footer = () => {
                                             <p>
                                                 Tým Trochu Jiného Networkingu se zavazuje zpracovávat Vaše osobní údaje vždy transparentně a v souladu s GDPR i dalšími platnými právními předpisy.
                                             </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </DialogPanel>
+                    </div>
+                </div>
+            </Dialog>
+            <Dialog open={contactOpen} onClose={setContactOpen} className="relative z-50">
+                <DialogBackdrop
+                    transition
+                    className="fixed inset-0 bg-networking-dark bg-opacity-75 transition-opacity data-[closed]:opacity-0 data-[enter]:duration-300 data-[leave]:duration-200 data-[enter]:ease-out data-[leave]:ease-in"
+                />
+                <div className="fixed inset-0 z-10 w-screen overflow-y-auto">
+                    <div className="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
+                        <DialogPanel
+                            transition
+                            className="relative transform overflow-hidden rounded-lg bg-networking-dark px-4 pb-4 pt-5 text-left shadow-xl transition-all data-[closed]:translate-y-4 data-[closed]:opacity-0 data-[enter]:duration-300 data-[leave]:duration-200 data-[enter]:ease-out data-[leave]:ease-in sm:my-8 sm:w-full sm:max-w-xl sm:p-6 data-[closed]:sm:translate-y-0 data-[closed]:sm:scale-95"
+                        >
+                            <FontAwesomeIcon icon={faXmark} className='h-6 w-6 text-white absolute top-2 right-2 cursor-pointer' onClick={() => setContactOpen(false)} />
+                            <div>
+                                <div className="mt-3 text-center sm:mt-5">
+                                    <DialogTitle as="h3" className="text-lg font-semibold text-networking-green">
+                                        Pojďme se spojit!
+                                    </DialogTitle>
+                                    <div className="mt-2">
+                                        <div className="text-sm text-blac/5">
+                                            <p>
+                                                Zajímá vás #trochujinej networking? Ozvěte se nám!
+                                            </p>
+                                            <br />
+
+                                            <p>
+                                                📧
+                                                <Link className='underline' href='mailto:networking@trochujinej.cz'>
+                                                    networking@trochujinej.cz
+                                                </Link>
+                                                <br />
+                                                <br />
+                                                📱
+                                                <Link className='underline' href='tel:+420602646321'>
+                                                    +420 602 646 321
+                                                </Link>
+                                            </p>
+                                            <br />
+
+                                            <p>
+                                                Organizátor:<br />
+                                                WANTMORE s.r.o. ve spolupráci se ZIGILAB s.r.o.
+                                            </p>
+                                            <br />
+
+                                            <div className='flex flex-col items-center'>
+                                                Sledujte nás:<br />
+                                                <br />
+                                                <div className="flex gap-3">
+                                                    <Link href='https://www.linkedin.com/company/trochu-jinej-networking/posts/?feedView=all' target="_blank">
+                                                        <FontAwesomeIcon
+                                                            icon={faLinkedin}
+                                                            className='h-4 w-4 text-white'
+                                                        />
+                                                    </Link>
+                                                    <Link href='https://www.facebook.com/trochujinejnetworking' target="_blank">
+                                                        <FontAwesomeIcon
+                                                            icon={faFacebook}
+                                                            className='h-4 w-4 text-white'
+                                                        />
+                                                    </Link>
+                                                    <Link href='https://www.instagram.com/trochujinejnetworking/' target="_blank">
+                                                        <FontAwesomeIcon
+                                                            icon={faInstagram}
+                                                            className='h-4 w-4 text-white'
+                                                        />
+                                                    </Link>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
