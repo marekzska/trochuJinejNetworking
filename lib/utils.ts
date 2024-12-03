@@ -17,11 +17,7 @@ export function formattedDate(date: string) {
 }
 
 export function formattedTime(date: string) {
-  const parsedDate = new Date(date);
-  const correctedDate = new Date(
-    parsedDate.getTime() + parsedDate.getTimezoneOffset() * 60000
-  );
-  return correctedDate
+  return new Date(new Date(date).getTime() + 60 * 60 * 1000)
     .toLocaleString("cs-CZ", {
       hour: "numeric",
       minute: "numeric",
@@ -29,6 +25,7 @@ export function formattedTime(date: string) {
     })
     .replace(/ /g, "");
 }
+
 
 export function daysToEvent(date: string) {
   const eventDate = new Date(date);
