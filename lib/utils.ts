@@ -17,7 +17,11 @@ export function formattedDate(date: string) {
 }
 
 export function formattedTime(date: string) {
-  return new Date(date)
+  const parsedDate = new Date(date);
+  const correctedDate = new Date(
+    parsedDate.getTime() + parsedDate.getTimezoneOffset() * 60000
+  );
+  return correctedDate
     .toLocaleString("cs-CZ", {
       hour: "numeric",
       minute: "numeric",
