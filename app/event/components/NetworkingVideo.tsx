@@ -16,17 +16,21 @@ export const NetworkingVideo = ({ slug }: NetworkingVideoProps) => {
     useEffect(() => {
         const video = document.querySelector('video')!;
         if (isPlaying) {
-            video.play();
+            video?.play();
         } else {
-            video.pause();
+            video?.pause();
         }
     }, [isPlaying])
     return (
         <div className="relative w-1/2 aspect-[2/3] overflow-hidden rounded-3xl cursor-pointer" onClick={() => setIsPlaying(!isPlaying)}>
-            {!isPlaying && <FontAwesomeIcon icon={faYoutube} className="h-20 text-networking-green mb-2 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />}
-            <video muted={false} className="h-full w-full object-cover" poster={videos[slug as keyof typeof videos].thumbnail ? videos[slug as keyof typeof videos].thumbnail : undefined}>
-                <source src={videos[slug as keyof typeof videos].video} type="video/mp4" />
-            </video>
+            {videos[slug as keyof typeof videos] &&
+                <>
+                    {!isPlaying && <FontAwesomeIcon icon={faYoutube} className="h-20 text-networking-green mb-2 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />}
+                    <video muted={false} className="h-full w-full object-cover" poster={videos[slug as keyof typeof videos].thumbnail ? videos[slug as keyof typeof videos].thumbnail : undefined}>
+                        <source src={videos[slug as keyof typeof videos].video} type="video/mp4" />
+                    </video>
+                </>
+            }
         </div>
     )
 }
